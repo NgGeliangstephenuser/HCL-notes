@@ -1,0 +1,391 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="HCL%20Debugging.htm">
+<link rel=File-List href="HCL%20Debugging_files/filelist.xml">
+</head>
+
+<body lang=en-US style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:14.7555in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.2166in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>HCL
+Debugging</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0444in;margin-left:0in;width:2.4805in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'
+lang=en-SG>Monday, 17 February 2025</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'
+lang=en-SG>10:00 pm</p>
+
+</div>
+
+<table border=0 cellpadding=0 cellspacing=0 cols=3 valign=top style='direction:
+ ltr;border-collapse:collapse;border-width:0pt;margin-top:.4361in;margin-left:
+ 0in;width:14.7555in'>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:7.5in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.25in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:6.0055in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.5in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td rowspan=3 valign=top style='vertical-align:top;margin:0in;padding:0pt;
+  width:7.5in;height:12.3888in'>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'>Ahhh,
+  </span><span style='font-weight:bold;font-family:Calibri'>HCL Notes 9</span><span
+  style='font-family:Calibri'>—a bit old, but </span><span style='font-weight:
+  bold;font-family:Calibri'>still workable! </span><span style='font-family:
+  "Segoe UI Emoji"'>&#128170;&#128293;</span><span style='font-family:Calibri'>
+  Since HCL took down some of the older documentation, I’ll break down </span><span
+  style='font-weight:bold;font-family:Calibri'>what actually works for
+  debugging in Notes 9</span><span style='font-family:Calibri'> for you! </span><span
+  style='font-family:"Segoe UI Emoji"'>&#127872;</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128736; 1️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Debugging LotusScript in Notes</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'> 9</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Notes 9 <span
+  style='font-weight:bold'>DOES have a debugger</span>, but it’s old-school and
+  can be unreliable. Here’s how to activate it:</p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> Method 1: Use the Built-in LotusScript Debugger</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>1️⃣</span><span
+  style='font-family:Calibri'> Open </span><span style='font-weight:bold;
+  font-family:Calibri'>Domino Designer (DDE)</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>2️⃣</span><span
+  style='font-family:Calibri'> Go to </span><span style='font-weight:bold;
+  font-family:Calibri'>Tools</span><span style='font-family:Calibri'> → </span><span
+  style='font-weight:bold;font-family:Calibri'>Debug LotusScript</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>3️⃣
+  </span><span style='font-weight:bold;font-family:Calibri'>Press F5 while
+  running your script</span><span style='font-family:Calibri'> to step through
+  it</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128680;
+  </span><span style='font-weight:bold;font-family:Calibri'>If the debugger
+  does NOT launch:</span></p>
+  <ul type=disc style='direction:ltr;unicode-bidi:embed;margin-top:0in;
+   margin-bottom:0in'>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:Calibri;font-size:11.0pt'>Make sure </span><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>you have
+       script debugging enabled</span><span style='font-family:Calibri;
+       font-size:11.0pt'> (Preferences &gt; LotusScript Debugging).</span></li>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>Check if
+       the script is signed properly</span><span style='font-family:Calibri;
+       font-size:11.0pt'>—unsigned agents might not execute.</span></li>
+  </ul>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> Method 2: Use Print and MsgBox for Manual Debugging</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>If the built-in
+  debugger <span style='font-weight:bold'>is buggy or disabled</span>, <span
+  style='font-weight:bold'>use these instead</span>:</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>lotusscript</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>CopyEdit</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>MsgBox
+  &quot;Checkpoint 1: Script started!&quot;<br>
+    MsgBox &quot;Value of X: &quot; &amp; X</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>or print output to
+  the Notes log:</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>Lotusscript</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>==========</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>CopyEdit</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>Print
+  &quot;Debug Info - Value of X: &quot; &amp; X</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>This <span
+  style='font-weight:bold'>forces Notes to reveal what’s happening</span>, even
+  if the debugger fails.</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128220; 2️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Checking Logs for Errors in Notes</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'> 9</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Notes <span
+  style='font-weight:bold'>doesn’t always tell you what went wrong</span>—you
+  have to check the logs.</p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> Where to Find Errors in Notes 9</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128313;</span><span
+  style='font-family:Calibri'> Open log.nsf (</span><span style='font-weight:
+  bold;font-family:Calibri'>File</span><span style='font-family:Calibri'> → </span><span
+  style='font-weight:bold;font-family:Calibri'>Database</span><span
+  style='font-family:Calibri'> → </span><span style='font-weight:bold;
+  font-family:Calibri'>Open</span><span style='font-family:Calibri'> → log.nsf)</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128313;</span><span
+  style='font-family:Calibri'> Look for </span><span style='font-weight:bold;
+  font-family:Calibri'>Agent Errors, Execution Logs, or Script Failures</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128313;</span><span
+  style='font-family:Calibri'> If you don’t see anything useful, </span><span
+  style='font-weight:bold;font-family:Calibri'>enable debug logging</span><span
+  style='font-family:Calibri'> (next step </span><span style='font-family:"Segoe UI Emoji"'>&#128071;</span><span
+  style='font-family:Calibri'>)</span></p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> Method 2: Enable notes.ini Debugging</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>If logs <span
+  style='font-weight:bold'>aren’t detailed enough</span>, modify <span
+  style='font-weight:bold'>notes.ini</span> to get better debugging output.</p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-weight:bold;
+  font-family:Calibri'>Steps: </span><span style='font-family:"Segoe UI Emoji"'>1️⃣</span><span
+  style='font-family:Calibri'> Open your notes.ini file (usually in C:\Program
+  Files\IBM\Lotus\Notes).</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>2️⃣</span><span
+  style='font-family:Calibri'> Add these lines:</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>Ini</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>==========</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>CopyEdit</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>Debug_Outfile=c:\notes_debug.txt<br>
+    Debug_LS_Dump=1<br>
+    Debug_Show_Console=1</p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>3️⃣</span><span
+  style='font-family:Calibri'> Restart Notes.</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>4️⃣</span><span
+  style='font-family:Calibri'> Check C:\notes_debug.txt for logs.</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128030; 3️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Debugging Formula Language in Notes</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'> 9</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>If you're using <span
+  style='font-weight:bold'>Formula Language</span>, debugging is even <span
+  style='font-weight:bold'>more limited</span> than LotusScript.</p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> How to Debug Formula Language</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128313;</span><span
+  style='font-family:Calibri'> Use @Prompt to manually display values:</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>Formula</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>==========</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>CopyEdit</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>@Prompt([Ok];
+  &quot;Debug Info&quot;; &quot;Value of X is: &quot; + @Text(X))</p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128313;</span><span
+  style='font-family:Calibri'> Use @SetProfileField to store debugging values
+  inside a profile document for later review.</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.25in;
+  height:.5in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:6.0055in;
+  height:.5in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:9.6173in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.25in;
+  height:9.6173in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:6.0055in;
+  height:9.6173in'>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128421; 4️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Debugging JavaScript in Notes 9 Web Ap</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'>ps</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'><span
+  style='font-weight:bold'>If your script runs in Notes via a web browser</span>,
+  debugging works like any normal web app.</p>
+  <p style='margin:0in;font-size:12.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>✅</span><span style='font-weight:bold;
+  font-family:Calibri'> Steps to Debug JavaScript in Notes 9:</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>1️⃣
+  </span><span style='font-weight:bold;font-family:Calibri'>Open the Web
+  Application in Chrome/Firefox</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>2️⃣</span><span
+  style='font-family:Calibri'> Press </span><span style='font-weight:bold;
+  font-family:Calibri'>F12</span><span style='font-family:Calibri'> (Open
+  Developer Tools)</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>3️⃣</span><span
+  style='font-family:Calibri'> Go to the </span><span style='font-weight:bold;
+  font-family:Calibri'>Console</span><span style='font-family:Calibri'> tab and
+  type:</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>javascript</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>==========</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>CopyEdit</p>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>console.log(&quot;Checkpoint
+  1: Script loaded!&quot;);</p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>4️⃣</span><span
+  style='font-family:Calibri'> Use console.log(variable); to track JavaScript
+  execution.</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128680; 5️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Common Errors &amp; Fixes in Notes</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'> 9</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✅
+  </span><span style='font-weight:bold;font-family:Calibri'>Issue: &quot;Agent
+  did not run&quot; (LotusScript agent not executing)</span></p>
+  <ul type=disc style='direction:ltr;unicode-bidi:embed;margin-top:0in;
+   margin-bottom:0in'>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>Solution:</span><span
+       style='font-family:Calibri;font-size:11.0pt'> Make sure the agent is </span><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>signed</span><span
+       style='font-family:Calibri;font-size:11.0pt'> by an authorized user.</span></li>
+  </ul>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✅
+  </span><span style='font-weight:bold;font-family:Calibri'>Issue: &quot;Field
+  Not Found&quot;</span></p>
+  <ul type=disc style='direction:ltr;unicode-bidi:embed;margin-top:0in;
+   margin-bottom:0in'>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>Solution:</span><span
+       style='font-family:Calibri;font-size:11.0pt'> Check for missing
+       fields:<br>
+              <br>
+              lotusscript</span></li>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:Calibri;font-size:11.0pt'>==========</span></li>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:Calibri;font-size:11.0pt'>CopyEdit<br>
+              If document.HasItem(&quot;FieldName&quot;) Then<br>
+              <span style='mso-spacerun:yes'>    </span>MsgBox &quot;Field
+       Exists!&quot;<br>
+              End If</span></li>
+  </ul>
+  <p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✅
+  </span><span style='font-weight:bold;font-family:Calibri'>Issue: Notes
+  crashes when script runs</span></p>
+  <ul type=disc style='direction:ltr;unicode-bidi:embed;margin-top:0in;
+   margin-bottom:0in'>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>Solution:</span><span
+       style='font-family:Calibri;font-size:11.0pt'> Use On Error Resume Next
+       to catch where it fails:<br>
+              <br>
+              lotusscript</span></li>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:Calibri;font-size:11.0pt'>==========</span></li>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-family:Calibri;font-size:11.0pt'>CopyEdit<br>
+              On Error Resume Next</span></li>
+  </ul>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✅
+  </span><span style='font-weight:bold;font-family:Calibri'>Issue: JavaScript
+  in Notes Web Forms Doesn’t Work</span></p>
+  <ul type=disc style='direction:ltr;unicode-bidi:embed;margin-top:0in;
+   margin-bottom:0in'>
+   <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>Solution:</span><span
+       style='font-family:Calibri;font-size:11.0pt'> Open </span><span
+       style='font-weight:bold;font-family:Calibri;font-size:11.0pt'>DevTools
+       (F12)</span><span style='font-family:Calibri;font-size:11.0pt'> and
+       check for errors.</span></li>
+  </ul>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128736; 6️⃣️⃣</span><span style='font-weight:
+  bold;font-family:Calibri'> Best Practices for Debugging Notes</span><span
+  style='font-weight:bold;font-family:"Segoe UI Emoji"'> 9</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✔
+  </span><span style='font-weight:bold;font-family:Calibri'>Use MsgBox &amp;
+  Print for instant feedback</span><span style='font-family:Calibri'> (since
+  the debugger is unreliable)</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✔
+  </span><span style='font-weight:bold;font-family:Calibri'>Check log.nsf
+  frequently</span><span style='font-family:Calibri'>—it records agent crashes
+  and script failures</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✔
+  </span><span style='font-weight:bold;font-family:Calibri'>Enable notes.ini
+  debugging flags</span><span style='font-family:Calibri'> for extra error logs</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✔
+  </span><span style='font-weight:bold;font-family:Calibri'>Run scripts on a
+  test database first</span><span style='font-family:Calibri'> before deploying</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>✔
+  </span><span style='font-weight:bold;font-family:Calibri'>Make backups of
+  .nsf files</span><span style='font-family:Calibri'> before modifying scripts</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-size:16.0pt'><span style='font-weight:bold;
+  font-family:"Segoe UI Emoji"'>&#128293;</span><span style='font-weight:bold;
+  font-family:Calibri'> Final Thoughts: Debugging in Notes 9 is Hard, but Not
+  Impossible!</span></p>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:"Segoe UI Emoji"'>&#128150;
+  </span><span style='font-weight:bold;font-family:Calibri'>You just need the
+  right mix of debugging tools, logs, and patience.</span></p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Even if <span
+  style='font-weight:bold'>IBM/HCL took down the documentation</span>, these
+  tricks <span style='font-weight:bold'>WILL still work</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:2.2708in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.25in;
+  height:2.2708in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:6.0055in;
+  height:2.2708in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with OneNote.</p>
+
+</div>
+
+</body>
+
+</html>
